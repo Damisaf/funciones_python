@@ -15,16 +15,30 @@
 # def generar_invitados():
 
 
-# --------------------------------
+def generar_invitados(cantidad):
+    lista_invitados = []
+    for i in range(cantidad):
+        print("Ingrese el invitado nº ", i+1)
+        nombre_invitado = input()
+        lista_invitados.append(nombre_invitado)
+    return lista_invitados
 
+
+def imprimir_invitados(lista_invitados):
+    print("Los invitados son:")
+    for i in range(len(lista_invitados)):
+        print(lista_invitados[i])
+
+
+# --------------------------------
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
-    
+
     # Alumno: Crear la función "generar_invitados"
 
     # Dentro de esa función el sistema deberá solicitar
-    # al usuario por consola que ingrese tres nombres de 
+    # al usuario por consola que ingrese tres nombres de
     # tres invitados.
     # IMPORTANTE: Utilizar un "input" por cada invitado
     # que se solicite ingresar
@@ -44,4 +58,7 @@ if __name__ == '__main__':
 
     # Imprimir en pantalla "lista_invitados":
 
+    cantidad_invitados = 3
+    lista_invitados = generar_invitados(cantidad_invitados)
+    imprimir_invitados(lista_invitados)
     print("terminamos")
